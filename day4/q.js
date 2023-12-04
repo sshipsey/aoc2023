@@ -1,6 +1,8 @@
 import fs from 'fs';
+import { intersect } from '../util.js';
 
 fs.readFile('input', 'utf-8', (err, inp) => {
+  console.log(intersect(['a', 'b', 'c'], ['a']));
   const processCard = (line) => {
     const l = line.split(': ')[1].split(' | ');
     return [
